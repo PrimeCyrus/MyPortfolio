@@ -95,22 +95,24 @@ body {
   animation: float-y 7s ease-in-out infinite;
 }
 
-/* drifting background blobs */
+/* drifting background blobs — translate only. Scaling a heavily-blurred
+   layer forces the browser to re-rasterize the blur every frame, which
+   starves the scroll; translating just re-composites a cached texture. */
 @keyframes drift-1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(8rem, 4rem) scale(1.15); }
-  66% { transform: translate(-4rem, 7rem) scale(0.92); }
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  33% { transform: translate3d(8rem, 4rem, 0); }
+  66% { transform: translate3d(-4rem, 7rem, 0); }
 }
 
 @keyframes drift-2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  40% { transform: translate(-7rem, -5rem) scale(1.2); }
-  75% { transform: translate(5rem, -2rem) scale(0.9); }
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  40% { transform: translate3d(-7rem, -5rem, 0); }
+  75% { transform: translate3d(5rem, -2rem, 0); }
 }
 
 @keyframes drift-3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-6rem, 8rem) scale(1.25); }
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-6rem, 8rem, 0); }
 }
 
 /* hover lift with blue glow for cards */
@@ -128,9 +130,9 @@ body {
     0 0 38px rgb(59 130 246 / 0.22);
 }
 
-.blob-1 { animation: drift-1 26s ease-in-out infinite; }
-.blob-2 { animation: drift-2 34s ease-in-out infinite; }
-.blob-3 { animation: drift-3 30s ease-in-out infinite; }
+.blob-1 { animation: drift-1 26s ease-in-out infinite; will-change: transform; }
+.blob-2 { animation: drift-2 34s ease-in-out infinite; will-change: transform; }
+.blob-3 { animation: drift-3 30s ease-in-out infinite; will-change: transform; }
 
 /* aurora sweep — static sheen; the drifting blobs supply the motion.
    (an animated full-screen conic layer wedges software-rendered GPUs) */

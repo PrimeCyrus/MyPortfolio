@@ -63,7 +63,7 @@ export default function Hero() {
 
       <motion.div
         style={{ scale, opacity, y, rotateX, transformPerspective: 1200, transformOrigin: "50% 20%" }}
-        className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4"
+        className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 will-change-transform md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4"
       >
         <div>
           <Fade delay={0.25}>

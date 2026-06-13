@@ -34,7 +34,9 @@ export default function Parallax({
 
   return (
     <div ref={ref} className={className}>
-      <motion.div style={{ y }}>{children}</motion.div>
+      <motion.div style={{ y }} className="will-change-transform">
+        {children}
+      </motion.div>
     </div>
   );
 }

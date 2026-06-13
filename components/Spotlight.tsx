@@ -27,16 +27,26 @@ export default function Spotlight() {
       wy += (my - wy) * 0.045;
       tx += (mx - tx) * 0.09;
       ty += (my - ty) * 0.09;
+      // Move pre-rendered gradient discs via transform only — the compositor
+      // re-uses the cached texture, so there is no per-frame repaint.
       if (wide.current) {
-        wide.current.style.background = `radial-gradient(48rem circle at ${wx}px ${wy}px, rgb(59 130 246 / 0.17), transparent 62%)`;
+        wide.current.style.transform = `translate3d(${wx}px, ${wy}px, 0)`;
       }
       if (tight.current) {
-        tight.current.style.background = `radial-gradient(18rem circle at ${tx}px ${ty}px, rgb(34 211 238 / 0.14), transparent 65%)`;
+        tight.current.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
       }
       raf = requestAnimationFrame(tick);
     };
 
-    window.addEventListener("mousemove", onMove);
+    // Place + reveal before the first paint of the loop so there's no flash
+    // of the disc sitting at the top-left origin.
+    for (const el of [wide.current, tight.current]) {
+      if (el) el.style.opacity = "1";
+    }
+    if (wide.current) wide.current.style.transform = `translate3d(${wx}px, ${wy}px, 0)`;
+    if (tight.current) tight.current.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+
+    window.addEventListener("mousemove", onMove, { passive: true });
     raf = requestAnimationFrame(tick);
     return () => {
       window.removeEventListener("mousemove", onMove);
@@ -46,8 +56,32 @@ export default function Spotlight() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-[3] hidden md:block" aria-hidden>
-      <div ref={wide} className="absolute inset-0" />
-      <div ref={tight} className="absolute inset-0" />
+      {/* Each light is a fixed-size gradient disc, centred on the origin via a
+          negative margin, then translated to the cursor. Transform-only = cheap. */}
+      <div
+        ref={wide}
+        className="absolute left-0 top-0 opacity-0 will-change-transform"
+        style={{
+          width: "80rem",
+          height: "80rem",
+          marginLeft: "-40rem",
+          marginTop: "-40rem",
+          background:
+            "radial-gradient(circle 48rem at center, rgb(59 130 246 / 0.17), transparent 62%)",
+        }}
+      />
+      <div
+        ref={tight}
+        className="absolute left-0 top-0 opacity-0 will-change-transform"
+        style={{
+          width: "32rem",
+          height: "32rem",
+          marginLeft: "-16rem",
+          marginTop: "-16rem",
+          background:
+            "radial-gradient(circle 18rem at center, rgb(34 211 238 / 0.14), transparent 65%)",
+        }}
+      />
     </div>
   );
 }

@@ -50,18 +50,13 @@ export default function SectionFX({
     [p.scaleIn, 1, 1, p.scaleOut]
   );
   const x = useTransform(scrollYProgress, [0, 0.38], [p.x, 0]);
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.78, 1],
-    [0.25, 1, 1, 0.4]
-  );
 
   if (reduced) return <div className={className}>{children}</div>;
 
   return (
     <div ref={ref} className={className} style={{ perspective: "1400px" }}>
       <motion.div
-        style={{ rotateX, scale, x, opacity, transformOrigin: "50% 60%" }}
+        style={{ rotateX, scale, x, transformOrigin: "50% 60%" }}
         className="will-change-transform"
       >
         {children}

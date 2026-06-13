@@ -57,7 +57,7 @@ function Knot() {
 export default function Scene3D() {
   return (
     <Canvas
-      dpr={[1, 2]}
+      dpr={[1, 1.5]}
       camera={{ position: [0, 0, 7], fov: 42 }}
       gl={{ antialias: true, alpha: true }}
       style={{ background: "transparent" }}

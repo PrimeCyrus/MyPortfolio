@@ -26,20 +26,20 @@ export default function Background() {
       <div className="aurora-sweep absolute inset-0" />
 
       {/* parallax blob layers (outer = scroll drift, inner = idle drift) */}
-      <motion.div style={{ y: y1 }} className="absolute -top-40 left-[8%] h-[36rem] w-[36rem]">
-        <div className="blob-1 h-full w-full rounded-full bg-cobalt/28 blur-[130px]" />
+      <motion.div style={{ y: y1 }} className="absolute -top-40 left-[8%] h-[36rem] w-[36rem] will-change-transform">
+        <div className="blob-1 h-full w-full rounded-full bg-cobalt/28 blur-[90px]" />
       </motion.div>
-      <motion.div style={{ y: y2 }} className="absolute top-[35%] right-[-12%] h-[32rem] w-[32rem]">
-        <div className="blob-2 h-full w-full rounded-full bg-cyan/20 blur-[120px]" />
+      <motion.div style={{ y: y2 }} className="absolute top-[35%] right-[-12%] h-[32rem] w-[32rem] will-change-transform">
+        <div className="blob-2 h-full w-full rounded-full bg-cyan/20 blur-[80px]" />
       </motion.div>
-      <motion.div style={{ y: y3 }} className="absolute bottom-[-15%] left-[28%] h-[34rem] w-[34rem]">
-        <div className="blob-3 h-full w-full rounded-full bg-[#6366f1]/22 blur-[140px]" />
+      <motion.div style={{ y: y3 }} className="absolute bottom-[-15%] left-[28%] h-[34rem] w-[34rem] will-change-transform">
+        <div className="blob-3 h-full w-full rounded-full bg-[#6366f1]/22 blur-[95px]" />
       </motion.div>
 
       {/* faint global grid, slowly crawling with the scroll */}
       <motion.div
         style={{ y: yGrid }}
-        className="absolute inset-x-0 -inset-y-16 opacity-60 [mask-image:radial-gradient(70rem_50rem_at_50%_30%,black,transparent)]"
+        className="absolute inset-x-0 -inset-y-16 opacity-60 will-change-transform [mask-image:radial-gradient(70rem_50rem_at_50%_30%,black,transparent)]"
       >
         <div
           className="h-full w-full"
