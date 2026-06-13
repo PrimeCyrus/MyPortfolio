@@ -8,10 +8,34 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
+    title: "Hostel Management",
+    blurb: "A hostel management system",
+    tags: ["Web App", "Management"],
+    url: "https://site--hostelmanagement--j7bz4xk9jtkj.code.run/",
+    year: "2026",
+  },
+
+  {
     title: "The Grimoire",
     blurb: "A Fantasy Quest Journal",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     url: "https://fantasyjournal.netlify.app",
+    year: "2026",
+  },
+
+  {
+    title: "Lucky Draw Wheel",
+    blurb: "A spin-to-win wheel, sunflower-bright.",
+    tags: ["Interactive", "JavaScript"],
+    url: "https://luckydrawwheel.netlify.app",
+    year: "2026",
+  },
+
+  {
+    title: "MLBB Skin Collage",
+    blurb: "AI-powered collage maker for MLBB skins.",
+    tags: ["TypeScript", "Canvas"],
+    url: "https://skincoll.netlify.app",
     year: "2026",
   },
   {
@@ -26,27 +50,6 @@ export const featuredProjects: Project[] = [
     blurb: "A marketplace for authentic Naga handicrafts.",
     tags: ["E-commerce", "Web App"],
     url: "https://nagahaat.netlify.app",
-    year: "2026",
-  },
-  {
-    title: "MLBB Skin Collage",
-    blurb: "AI-powered collage maker for MLBB skins.",
-    tags: ["TypeScript", "Canvas"],
-    url: "https://skincoll.netlify.app",
-    year: "2026",
-  },
-  {
-    title: "Social Charisma",
-    blurb: "First Impressions — social skills as a trainable game.",
-    tags: ["Web App", "Product Design"],
-    url: "https://socialcharisma.netlify.app",
-    year: "2025",
-  },
-  {
-    title: "Lucky Draw Wheel",
-    blurb: "A spin-to-win wheel, sunflower-bright.",
-    tags: ["Interactive", "JavaScript"],
-    url: "https://luckydrawwheel.netlify.app",
     year: "2026",
   },
 ];
@@ -65,20 +68,6 @@ export const moreProjects: Project[] = [
     tags: ["Landing"],
     url: "https://theabyssraid.netlify.app",
     year: "2025",
-  },
-  {
-    title: "NagaBuzz Portal",
-    blurb: "Web portal companion for the NagaBuzz Flutter app.",
-    tags: ["Portal"],
-    url: "https://nagabuzzwebportal.netlify.app",
-    year: "2026",
-  },
-  {
-    title: "SCoins / Dawnlight",
-    blurb: "A market-rates dashboard with a treasure-ledger feel.",
-    tags: ["Dashboard"],
-    url: "https://scoins.netlify.app",
-    year: "2026",
   },
 ];
 
@@ -112,7 +101,11 @@ export const rhythm = [
 ];
 
 export const rhythmFacts = [
-  { label: "Chronotype", value: "Early Bird", note: "only 26% of commits at night" },
+  {
+    label: "Chronotype",
+    value: "Early Bird",
+    note: "only 26% of commits at night",
+  },
   { label: "Weekend activity", value: "19%", note: "of commits on weekends" },
 ];
 
