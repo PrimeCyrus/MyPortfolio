@@ -11,7 +11,7 @@ export const featuredProjects: Project[] = [
     title: "The Grimoire",
     blurb: "A Fantasy Quest Journal",
     tags: ["Next.js", "TypeScript", "Tailwind"],
-    url: "https://grimoirequest.netlify.app",
+    url: "https://fantasyjournal.netlify.app",
     year: "2026",
   },
   {
