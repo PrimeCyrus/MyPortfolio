@@ -203,7 +203,7 @@ export const posts = [
 
 export const socials = [
   { label: "GitHub", url: "https://github.com/PrimeCyrus" },
-  { label: "X / Twitter", url: "https://x.com/_PrimeCyrus" },
+  { label: "X / Twitter", url: "https://x.com/_PrimeCyrus_" },
   { label: "Instagram", url: "https://instagram.com/_cozybuilder_?igsh=MTk0cGMybnBlczJ0dw==" },
 ];
 
