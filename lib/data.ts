@@ -7,6 +7,7 @@ export type Project = {
 };
 
 export const featuredProjects: Project[] = [
+
   {
     title: "Hostel Management",
     blurb: "A hostel management system",
@@ -20,6 +21,13 @@ export const featuredProjects: Project[] = [
     blurb: "A Fantasy Quest Journal",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     url: "https://fantasyjournal.netlify.app",
+    year: "2026",
+  },
+ {
+    title: "Git Journey",
+    blurb: "A visual coding journey using GitHub stats and projects.",
+    tags: ["Next.js", "TypeScript", "Data Visualization"],
+    url: "https://gitjourney.netlify.app",
     year: "2026",
   },
 
@@ -195,9 +203,8 @@ export const posts = [
 
 export const socials = [
   { label: "GitHub", url: "https://github.com/PrimeCyrus" },
-  { label: "X / Twitter", url: "#" },
-  { label: "LinkedIn", url: "#" },
-  { label: "Instagram", url: "#" },
+  { label: "X / Twitter", url: "https://x.com/_PrimeCyrus" },
+  { label: "Instagram", url: "https://instagram.com/_cozybuilder_?igsh=MTk0cGMybnBlczJ0dw==" },
 ];
 
-export const email = "nezot98@gmail.com";
+export const email = "cyrusbussiness2026@gmail.com";
