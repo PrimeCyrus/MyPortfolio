@@ -8,8 +8,6 @@ const Scene3D = dynamic(() => import("./Scene3D"), { ssr: false });
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
-const openTo = ["Freelance", "Part-time", "Full-time"];
-
 function Fade({
   children,
   delay,
@@ -49,7 +47,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="top"
-      className="aurora relative overflow-hidden pt-28 md:pt-32"
+      className="aurora relative flex min-h-screen items-center justify-center overflow-hidden pt-20"
     >
       {/* blueprint grid fading downward */}
       <div
@@ -62,25 +60,21 @@ export default function Hero() {
       />
 
       <motion.div
-        style={{ scale, opacity, y, rotateX, transformPerspective: 1200, transformOrigin: "50% 20%" }}
-        className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 will-change-transform md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4"
+        style={{
+          scale,
+          opacity,
+          y,
+          rotateX,
+          transformPerspective: 1200,
+          transformOrigin: "50% 20%",
+        }}
+        className="relative w-full mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 will-change-transform md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-4"
       >
         <div>
-          <Fade delay={0.25}>
-            <span className="glass inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-sm font-semibold text-soft">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute h-full w-full animate-ping rounded-full bg-mint opacity-50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-mint" />
-              </span>
-              Open to work
-            </span>
-          </Fade>
-
           <Fade delay={0.4}>
-            <h1 className="mt-8 font-display text-5xl font-bold leading-[1.04] tracking-tight md:text-[4.6rem]">
-              Cyrus here.
-              <br />
-              I turn ideas into{" "}
+            <h1 className="font-display text-5xl font-bold leading-[1.04] tracking-tight md:text-[4.6rem]">
+              Hi, Cyrus here..
+              <br />I turn ideas into{" "}
               <span className="text-gradient">
                 apps, websites and useful tools.
               </span>
@@ -91,41 +85,8 @@ export default function Hero() {
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-soft">
               Founder of{" "}
               <span className="font-semibold text-ink">Enz Labs</span>.
-              10+ products shipped solo in a year.
+              Built over 15 projects solo in a year.
             </p>
-          </Fade>
-
-          <Fade delay={0.68}>
-            <div className="mt-8 flex flex-wrap items-center gap-2.5">
-              <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-soft">
-                open_to:
-              </span>
-              {openTo.map((o) => (
-                <span
-                  key={o}
-                  className="glass rounded-lg px-4 py-1.5 text-sm font-bold transition-colors duration-200 hover:text-cobalt-deep"
-                >
-                  {o}
-                </span>
-              ))}
-            </div>
-          </Fade>
-
-          <Fade delay={0.8}>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <a
-                href="#contact"
-                className="cursor-pointer rounded-lg bg-gradient-to-r from-cobalt to-cyan px-7 py-3.5 font-bold text-paper shadow-[0_0_28px_rgb(59_130_246/0.35)] transition-all duration-200 hover:shadow-[0_0_44px_rgb(34_211_238/0.5)]"
-              >
-                Let&apos;s talk →
-              </a>
-              <a
-                href="#work"
-                className="glass cursor-pointer rounded-lg px-7 py-3.5 font-bold text-ink transition-colors duration-200 hover:text-cobalt-deep"
-              >
-                See my work
-              </a>
-            </div>
           </Fade>
         </div>
 

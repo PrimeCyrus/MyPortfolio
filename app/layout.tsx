@@ -22,8 +22,7 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Cyrus's Portfolio",
-  description:
-    "Cyrus — Founder of Enz Labs. 10+ products shipped solo. Open to freelance, part-time, full-time.",
+  description: "Cyrus — Built 15+ projects solo in a year.",
 };
 
 export default function RootLayout({

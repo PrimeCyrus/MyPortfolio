@@ -119,7 +119,7 @@ export const rhythmFacts = [
 
 export const workStyle = [
   "Self-taught — I learn whatever the project needs",
-  "10 live products in a year, solo",
+  "15+ projects solo in a year",
   "Figma to deployment, one pair of hands",
   "Async-friendly and direct",
 ];
@@ -185,7 +185,7 @@ export const testimonials = [
 
 export const posts = [
   {
-    title: "What shipping 10 sites in a year taught me about finishing",
+    title: "What shipping 15 sites in a year taught me about finishing",
     tag: "Process",
     date: "Coming soon",
   },
