@@ -29,14 +29,13 @@ export default function WorkTogether() {
     <section id="together" className="mx-auto max-w-6xl px-5 py-24 md:px-8">
       <Reveal>
         <p className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-cobalt">
-          03 — No wrong way to hire me
+          03 — Partnership & Engagement
         </p>
         <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
           Let&apos;s work together
         </h2>
         <p className="mt-3 max-w-xl text-soft">
-          Freelance, part-time, full-time, or a startup from zero. Pick a
-          lane — or invent one.
+          Flexible collaboration models. Full-stack execution. Outstanding results.
         </p>
       </Reveal>
 

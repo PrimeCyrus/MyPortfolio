@@ -18,16 +18,16 @@ export default function Nav() {
       transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md"
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 md:px-8">
-        <a href="#top" className="font-display text-lg font-bold tracking-tight">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2.5 md:py-3.5 md:px-8">
+        <a href="#top" className="font-display text-2xl md:text-3xl font-bold tracking-tight">
           enz<span className="text-cobalt">/</span>labs
         </a>
-        <ul className="hidden items-center gap-7 md:flex">
+        <ul className="hidden items-center gap-7 md:gap-11 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-semibold text-soft transition-colors duration-200 hover:text-cobalt"
+                className="text-base md:text-lg font-semibold text-soft transition-colors duration-200 hover:text-cobalt"
               >
                 {l.label}
               </a>
@@ -36,7 +36,7 @@ export default function Nav() {
         </ul>
         <a
           href="#contact"
-          className="cursor-pointer rounded-lg bg-gradient-to-r from-cobalt to-cyan px-5 py-2 text-sm font-bold text-paper transition-shadow duration-200 hover:shadow-[0_0_24px_rgb(59_130_246/0.45)]"
+          className="cursor-pointer rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base font-bold text-paper transition-shadow duration-200 hover:shadow-[0_0_24px_rgb(59_130_246/0.45)]"
         >
           Say hi
         </a>

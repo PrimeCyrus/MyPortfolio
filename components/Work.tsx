@@ -77,7 +77,7 @@ export default function Work() {
 
         <Reveal delay={0.1} from="zoom">
           <p className="mt-12 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-soft">
-            + A few more experiments
+            + Experimental mini games
           </p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {moreProjects.map((p) => (
