@@ -205,7 +205,7 @@ export const socials = [
   { label: "Twitter", url: "https://x.com/_PrimeCyrus_" },
   {
     label: "Instagram",
-    url: "https://instagram.com/_cozybuilder_?igsh=MTk0cGMybnBlczJ0dw==",
+    url: "https://instagram.com/_cozybuilder_",
   },
 ];
 

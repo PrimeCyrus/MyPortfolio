@@ -134,20 +134,6 @@ body {
 .blob-2 { animation: drift-2 34s ease-in-out infinite; will-change: transform; }
 .blob-3 { animation: drift-3 30s ease-in-out infinite; will-change: transform; }
 
-/* aurora sweep — static sheen; the drifting blobs supply the motion.
-   (an animated full-screen conic layer wedges software-rendered GPUs) */
-.aurora-sweep {
-  background: conic-gradient(
-    from 210deg at 50% 38%,
-    transparent 0deg,
-    rgb(59 130 246 / 0.07) 60deg,
-    transparent 130deg,
-    rgb(34 211 238 / 0.06) 200deg,
-    transparent 270deg,
-    rgb(99 102 241 / 0.07) 320deg,
-    transparent 360deg
-  );
-}
 
 @media (prefers-reduced-motion: reduce) {
   html {

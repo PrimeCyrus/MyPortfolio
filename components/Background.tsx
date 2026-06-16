@@ -22,8 +22,6 @@ export default function Background() {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden>
-      {/* aurora sheen behind everything */}
-      <div className="aurora-sweep absolute inset-0" />
 
       {/* parallax blob layers (outer = scroll drift, inner = idle drift) */}
       <motion.div style={{ y: y1 }} className="absolute -top-40 left-[8%] h-[36rem] w-[36rem] will-change-transform">
