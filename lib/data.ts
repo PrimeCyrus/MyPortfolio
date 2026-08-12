@@ -4,6 +4,7 @@ export type Project = {
   tags: string[];
   url: string;
   year: string;
+  image?: string;
 };
 
 export const featuredProjects: Project[] = [
@@ -13,6 +14,7 @@ export const featuredProjects: Project[] = [
     tags: ["Web App", "Management"],
     url: "https://site--hostelmanagement--j7bz4xk9jtkj.code.run/",
     year: "2026",
+    image: "/hostel-management.png",
   },
 
   {
@@ -21,6 +23,7 @@ export const featuredProjects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind"],
     url: "https://fantasyjournal.netlify.app",
     year: "2026",
+    image: "/the-grimoire.png",
   },
   {
     title: "Git Journey",
@@ -28,6 +31,7 @@ export const featuredProjects: Project[] = [
     tags: ["Next.js", "TypeScript", "Data Visualization"],
     url: "https://gitjourney.netlify.app",
     year: "2026",
+    image: "/git-journey.png",
   },
 
   {
@@ -36,6 +40,7 @@ export const featuredProjects: Project[] = [
     tags: ["Interactive", "JavaScript"],
     url: "https://luckydrawwheel.netlify.app",
     year: "2026",
+    image: "/lucky-draw-wheel.png",
   },
 
   {
@@ -44,6 +49,7 @@ export const featuredProjects: Project[] = [
     tags: ["TypeScript", "Canvas"],
     url: "https://skincoll.netlify.app",
     year: "2026",
+    image: "/mlbb-skin-collage.png",
   },
   {
     title: "MLBB Trade Hub",
@@ -51,6 +57,7 @@ export const featuredProjects: Project[] = [
     tags: ["Next.js", "TypeScript", "Marketplace"],
     url: "https://mlbbtradehub.netlify.app",
     year: "2026",
+    image: "/mlbb-trade-hub.png",
   },
   {
     title: "NagaHaat",
@@ -58,6 +65,7 @@ export const featuredProjects: Project[] = [
     tags: ["E-commerce", "Web App"],
     url: "https://nagahaat.netlify.app",
     year: "2026",
+    image: "/naga-haat.png",
   },
 ];
 
@@ -138,68 +146,162 @@ export const topProjects = [
   { name: "GitJourney", commits: 15 },
 ];
 
-/* ——— Ways to work together ——— */
+export type PricingTier = {
+  name: string;
+  price: string;
+  summary: string;
+  delivery: string;
+  revisions: string;
+  examples: string[];
+  features: { label: string; included: boolean }[];
+};
 
-export const collabModes = [
+export const pricingTiers: PricingTier[] = [
   {
-    icon: "zap",
-    name: "Freelance project",
-    desc: "A scoped website, app, or design job — idea to live URL.",
-    note: "from 100$",
+    name: "🚀 Landing Pages",
+    price: "Starting at ₹3k",
+    summary:
+      "Modern one-page websites designed to showcase your brand or product.",
+    delivery: "3-day delivery",
+    revisions: "3 Revisions",
+    examples: [
+      "Portfolio",
+      "Personal Brand",
+      "Product Launch",
+      "Startup",
+      "Event",
+    ],
+    features: [
+      { label: "1-page responsive website", included: true },
+      { label: "Modern UI/UX", included: true },
+      { label: "Contact form", included: true },
+      { label: "Basic SEO", included: true },
+      { label: "Social media integration", included: true },
+      { label: "Speed optimization", included: true },
+      { label: "Deployment included", included: true },
+      { label: "Payment integration", included: false },
+      { label: "Authentication", included: false },
+      { label: "Admin dashboard", included: false },
+    ],
   },
+
   {
-    icon: "clock",
-    name: "Part-time / Retainer",
-    desc: "Ongoing design + development, a few days a week.",
-    note: "Offer your rates",
+    name: "🏢 Business Websites",
+    price: "Starting at ₹7k",
+    summary:
+      "Professional multi-page websites that help businesses establish an online presence.",
+    delivery: "7-day delivery",
+    revisions: "5 Revisions",
+    examples: [
+      "Restaurant",
+      "Cafe",
+      "Gym",
+      "Salon",
+      "Agency",
+      "Law Firm",
+      "Clinic",
+      "Real Estate",
+    ],
+    features: [
+      { label: "Up to 5 pages", included: true },
+      { label: "Responsive design", included: true },
+      { label: "Custom design", included: true },
+      { label: "Contact & enquiry forms", included: true },
+      { label: "Google Maps integration", included: true },
+      { label: "WhatsApp integration", included: true },
+      { label: "Blog support", included: true },
+      { label: "Basic SEO", included: true },
+      { label: "Deployment & domain setup", included: true },
+      { label: "Payment integration", included: false },
+      { label: "Admin dashboard", included: false },
+    ],
   },
+
   {
-    icon: "briefcase",
-    name: "Full-time role",
-    desc: "Frontend, full-stack, or product engineering. I learn fast and ship faster.",
-    note: "Open to offers — remote first",
+    name: "🛒 Online Stores",
+    price: "Starting at ₹20k",
+    summary:
+      "Sell products online with secure payments, inventory, and order management.",
+    delivery: "20-day delivery",
+    revisions: "Unlimited Revisions",
+    examples: [
+      "Clothing Store",
+      "Electronics",
+      "Cosmetics",
+      "Grocery",
+      "Furniture",
+      "Jewelry",
+    ],
+    features: [
+      { label: "Unlimited products", included: true },
+      { label: "Product categories & variants", included: true },
+      { label: "Shopping cart & secure checkout", included: true },
+      { label: "Payment gateway integration", included: true },
+      { label: "Order & inventory management", included: true },
+      { label: "Customer accounts", included: true },
+      { label: "Admin dashboard", included: true },
+      { label: "Discount coupons", included: true },
+      { label: "SEO & performance optimization", included: true },
+      { label: "Deployment & domain setup", included: true },
+    ],
+  },
+
+  {
+    name: "📱 Mobile Apps",
+    price: "Starting at ₹20k",
+    summary:
+      "Cross-platform Android & iOS apps built with a modern, scalable architecture.",
+    delivery: "25-day delivery",
+    revisions: "Unlimited Revisions",
+    examples: [
+      "Restaurant App",
+      "Delivery App",
+      "Fitness App",
+      "Business App",
+      "Booking App",
+    ],
+    features: [
+      { label: "Android & iOS support", included: true },
+      { label: "Authentication", included: true },
+      { label: "REST API integration", included: true },
+      { label: "Push notifications", included: true },
+      { label: "Offline support", included: true },
+      { label: "Admin dashboard", included: true },
+      { label: "Performance optimization", included: true },
+      { label: "Deployment guidance", included: true },
+      { label: "App Store & Play Store support", included: true },
+    ],
+  },
+
+  {
+    name: "💡 Custom Software",
+    price: "Custom Quote",
+    summary:
+      "Tailored web and mobile solutions built around your unique business requirements.",
+    delivery: "Based on project scope",
+    revisions: "Unlimited Revisions",
+    examples: [
+      "SaaS Platforms",
+      "Marketplaces",
+      "AI Applications",
+      "Enterprise Portals",
+      "Multi-vendor Systems",
+      "Custom Dashboards",
+    ],
+    features: [
+      { label: "Custom functionality", included: true },
+      { label: "Scalable architecture", included: true },
+      { label: "Authentication & permissions", included: true },
+      { label: "Advanced admin dashboard", included: true },
+      { label: "Third-party integrations", included: true },
+      { label: "Advanced security", included: true },
+      { label: "Performance optimization", included: true },
+      { label: "Technical documentation", included: true },
+      { label: "Priority support", included: true },
+      { label: "Dedicated consultation", included: true },
+    ],
   },
 ];
-
-export const testimonials = [
-  {
-    quote:
-      "Cyrus took a vague idea and turned it into a site that looks like an agency build. The attention to detail is unreal.",
-    name: "John Ralte",
-    role: "Founder, Startup Co.",
-  },
-  {
-    quote:
-      "Fast, communicative, and sharp design instincts. Our conversion rate jumped within the first month.",
-    name: "Kevin Lian",
-    role: "Marketing Lead, Brand Inc.",
-  },
-  {
-    quote:
-      "Felt like having a full product team. Design, code, deployment — all handled, all excellent.",
-    name: "Lina Chen",
-    role: "CEO, Tech Ventures",
-  },
-];
-
-export const posts = [
-  {
-    title: "What shipping 15 sites in a year taught me about finishing",
-    tag: "Process",
-    date: "Coming soon",
-  },
-  {
-    title: "Self-taught, full speed: how I learn new stacks mid-project",
-    tag: "Learning",
-    date: "Coming soon",
-  },
-  {
-    title: "Next.js + Netlify: my zero-friction deploy pipeline",
-    tag: "Engineering",
-    date: "Coming soon",
-  },
-];
-
 export const socials = [
   { label: "GitHub", url: "https://github.com/PrimeCyrus" },
   { label: "Twitter", url: "https://x.com/_PrimeCyrus_" },

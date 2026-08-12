@@ -4,10 +4,8 @@ import { motion } from "framer-motion";
 
 const links = [
   { label: "01 About me", href: "#about" },
-  { label: "02 Work", href: "#work" },
-  { label: "03 Work together", href: "#together" },
-  { label: "04 Kind Words", href: "#testimonials" },
-  { label: "05 Writing", href: "#writing" },
+  { label: "02 Finished Projects", href: "#work" },
+  { label: "03 Services", href: "#services" },
 ];
 
 export default function Nav() {
@@ -19,7 +17,10 @@ export default function Nav() {
       className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/85 backdrop-blur-md"
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2.5 md:py-3.5 md:px-8">
-        <a href="#top" className="font-display text-2xl md:text-3xl font-bold tracking-tight">
+        <a
+          href="#top"
+          className="font-display text-2xl md:text-3xl font-bold tracking-tight"
+        >
           enz<span className="text-cobalt">/</span>labs
         </a>
         <ul className="hidden items-center gap-7 md:gap-11 md:flex">
@@ -34,12 +35,20 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contact"
-          className="cursor-pointer rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base font-bold text-paper transition-shadow duration-200 hover:shadow-[0_0_24px_rgb(59_130_246/0.45)]"
-        >
-          Say hi
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="#services"
+            className="cursor-pointer rounded-lg border border-cobalt/40 px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base font-bold text-cobalt transition-all duration-200 hover:bg-cobalt/10"
+          >
+            Services
+          </a>
+          <a
+            href="#contact"
+            className="cursor-pointer rounded-lg bg-gradient-to-r from-cobalt to-cyan px-4 py-1.5 md:px-5 md:py-2 text-sm md:text-base font-bold text-paper transition-shadow duration-200 hover:shadow-[0_0_24px_rgb(59_130_246/0.45)]"
+          >
+            Say hi
+          </a>
+        </div>
       </nav>
     </motion.header>
   );

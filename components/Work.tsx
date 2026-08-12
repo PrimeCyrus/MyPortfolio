@@ -13,7 +13,7 @@ export default function Work() {
               02 — Things I&apos;ve built
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight md:text-5xl">
-              Selected work
+              Finished Projects
             </h2>
             <p className="mt-3 max-w-lg text-soft">
               All live. Designed, built, shipped solo.
@@ -36,6 +36,15 @@ export default function Work() {
                   rel="noopener noreferrer"
                   className="glass card-lift group flex h-full cursor-pointer flex-col rounded-2xl p-7"
                 >
+                  {p.image && (
+                    <div className="mb-4 overflow-hidden rounded-xl">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="font-display text-xl font-semibold transition-colors duration-200 group-hover:text-cobalt-deep">
                       {p.title}
