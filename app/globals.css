@@ -68,25 +68,6 @@ body {
   backdrop-filter: blur(12px);
 }
 
-/* slow conic ring that spins behind the 3D scene */
-@keyframes spin-slow {
-  to { transform: rotate(360deg); }
-}
-
-.ring-spin {
-  background: conic-gradient(
-    from 0deg,
-    transparent 0deg,
-    rgb(59 130 246 / 0.35) 60deg,
-    transparent 140deg,
-    rgb(34 211 238 / 0.25) 240deg,
-    transparent 320deg
-  );
-  -webkit-mask: radial-gradient(closest-side, transparent 78%, black 80%);
-  mask: radial-gradient(closest-side, transparent 78%, black 80%);
-  animation: spin-slow 18s linear infinite;
-}
-
 @keyframes float-y {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-14px); }
@@ -140,7 +121,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-  .ring-spin,
   .float-y,
   .blob-1,
   .blob-2,

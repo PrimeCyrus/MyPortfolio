@@ -29,4 +29,4 @@ All copy lives in [lib/data.ts](lib/data.ts):
 
 Hero headline: [components/Hero.tsx](components/Hero.tsx). Colors & fonts: [app/globals.css](app/globals.css) (`@theme` block) and [app/layout.tsx](app/layout.tsx).
 
-Motion systems: [components/SectionFX.tsx](components/SectionFX.tsx) (scroll 3D bend/zoom per section), [components/Spotlight.tsx](components/Spotlight.tsx) (cursor-follow lighting), [components/Background.tsx](components/Background.tsx) (aurora + blobs + grid), [components/Scene3D.tsx](components/Scene3D.tsx) (hero 3D knot).
+Motion systems: [components/SectionFX.tsx](components/SectionFX.tsx) (scroll 3D bend/zoom per section), [components/Spotlight.tsx](components/Spotlight.tsx) (cursor-follow lighting), [components/Background.tsx](components/Background.tsx) (aurora + blobs + grid).

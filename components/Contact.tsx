@@ -21,7 +21,7 @@ export default function Contact() {
         <Parallax speed={0.9}>
           <Reveal>
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.25em] text-cobalt-deep">
-              06 — Got something in mind?
+              05 — Got something in mind?
             </p>
             <h2 className="mt-4 max-w-3xl font-display text-5xl font-bold leading-[1.04] tracking-tight md:text-8xl">
               Let&apos;s build

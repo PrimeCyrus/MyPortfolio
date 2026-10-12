@@ -84,6 +84,34 @@ export const moreProjects: Project[] = [
     url: "https://theabyssraid.netlify.app",
     year: "2025",
   },
+  {
+    title: "RegLoop AI",
+    blurb: "Turns new regulations into human-reviewed compliance policy PRs.",
+    tags: ["Next.js", "FastAPI", "AI"],
+    url: "https://github.com/PrimeCyrus/RegLoop",
+    year: "2026",
+  },
+  {
+    title: "NagaBuzz",
+    blurb: "Nagaland's news, notice board and discussion app.",
+    tags: ["Flutter", "Mobile App"],
+    url: "https://github.com/PrimeCyrus/NagaBuzz",
+    year: "2026",
+  },
+  {
+    title: "NagaBuzz Web Portal",
+    blurb: "Privacy policy and account-deletion portal for the NagaBuzz app.",
+    tags: ["Web App", "Supabase"],
+    url: "https://github.com/PrimeCyrus/NagaBuzz-web-portal",
+    year: "2026",
+  },
+  {
+    title: "Nagaland Quiz",
+    blurb: "A timed quiz app on Nagaland and general knowledge.",
+    tags: ["Flutter", "Mobile App"],
+    url: "https://github.com/PrimeCyrus/NagalandQuiz",
+    year: "2025",
+  },
 ];
 
 /* ——— GitHub story (from my real stats) ——— */

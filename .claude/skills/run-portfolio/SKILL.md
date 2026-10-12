@@ -6,7 +6,7 @@ description: Run, build, launch, screenshot, or smoke-test the Enz Labs portfoli
 # Run the Enz Labs portfolio
 
 Single-page Next.js 15 portfolio (Tailwind v4, Framer Motion, React Three Fiber).
-One route — `/` — composed of a hero (3D torus knot) plus scroll-animated
+One route — `/` — composed of a hero plus scroll-animated
 sections (`KnowMe`, `Work`, `WorkTogether`, `Testimonials`, `Writing`, `Contact`).
 
 It is driven by **`.claude/skills/run-portfolio/driver.mjs`** — a Playwright
@@ -120,7 +120,7 @@ Headless this shows nothing — use the driver to actually see/verify the page.
 ## Gotchas
 
 - **`preview_screenshot` (MCP) always times out (30s) on this app.** The R3F
-  `requestAnimationFrame` loop and the infinite `drift`/`ring-spin`/`ping` CSS
+  `requestAnimationFrame` loop and the infinite `drift`/`ping` CSS
   animations mean the page never reaches network/render idle, which that tool
   waits for. `preview_snapshot` (accessibility tree) *does* work and is great
   for checking text/structure. For pixels, use `driver.mjs shot`.
