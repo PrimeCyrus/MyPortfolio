@@ -1,6 +1,6 @@
 # Enz Labs — Portfolio of Cyrus
 
-Bold, electric-on-dark portfolio built with Next.js 15, Tailwind CSS v4, and Framer Motion.
+Minimal monochrome portfolio (dark by default, with a light theme toggle) built with Next.js 15 and Tailwind CSS v4.
 
 ## Run locally
 
@@ -19,14 +19,13 @@ Fully static — deploys anywhere. For Netlify: build command `npm run build`, p
 
 All copy lives in [lib/data.ts](lib/data.ts):
 
-- `featuredProjects` / `moreProjects` — project cards (titles, blurbs, live URLs)
-- `languages`, `rhythm`, `magnumOpus`, `topProjects` — the GitHub stats in the "Get to know me" tabs
-- `collabModes` — the four ways-to-work-together cards
-- `testimonials` — replace the placeholders with real client quotes
-- `posts` — blog/writing entries
-- `socials` — **X, LinkedIn, Instagram are `#` placeholders — add your real URLs**
-- `email` — contact email
+- `profile` — name, company, rotating headline words, hero intro and profile summary (highlighted words are flagged `true`)
+- `stats` — the stat cards under the profile
+- `featuredProjects` / `moreProjects` — the first six featured projects render as cards, the rest as the "More work" list
+- `pricingTiers` — the Services rows
+- `skills` — the two marquee rows (icons load from the devicon CDN)
+- `processSteps` — the "How I work" timeline
+- `socials`, `email` — hero, footer and contact links
+- `languages`, `rhythm`, `magnumOpus`, `topProjects`, `workStyle` — GitHub stats, currently not rendered
 
-Hero headline: [components/Hero.tsx](components/Hero.tsx). Colors & fonts: [app/globals.css](app/globals.css) (`@theme` block) and [app/layout.tsx](app/layout.tsx).
-
-Motion systems: [components/SectionFX.tsx](components/SectionFX.tsx) (scroll 3D bend/zoom per section), [components/Spotlight.tsx](components/Spotlight.tsx) (cursor-follow lighting), [components/Background.tsx](components/Background.tsx) (aurora + blobs + grid).
+Sections live in [components/](components/) and are composed in [app/page.tsx](app/page.tsx): Header, Hero, Profile, Services, Skills, Projects, Process, Footer. Colors, fonts and animations: [app/globals.css](app/globals.css) and [app/layout.tsx](app/layout.tsx). Scroll reveals: [components/FadeIn.tsx](components/FadeIn.tsx).

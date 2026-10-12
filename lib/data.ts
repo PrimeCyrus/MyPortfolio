@@ -5,20 +5,25 @@ export type Project = {
   url: string;
   year: string;
   image?: string;
+  repo?: string;
+  category?: string;
 };
 
 export const featuredProjects: Project[] = [
   {
     title: "Hostel Management",
+    category: "Management",
     blurb: "A hostel management system",
     tags: ["Web App", "Management"],
     url: "https://site--hostelmanagement--j7bz4xk9jtkj.code.run/",
     year: "2026",
     image: "/hostel-management.png",
+    repo: "https://github.com/PrimeCyrus/HostelManagement",
   },
 
   {
     title: "The Grimoire",
+    category: "Journal",
     blurb: "A Fantasy Quest Journal",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     url: "https://fantasyjournal.netlify.app",
@@ -27,15 +32,18 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "Git Journey",
+    category: "Data Viz",
     blurb: "A visual coding journey using GitHub stats and projects.",
     tags: ["Next.js", "TypeScript", "Data Visualization"],
     url: "https://gitjourney.netlify.app",
     year: "2026",
     image: "/git-journey.png",
+    repo: "https://github.com/PrimeCyrus/GitJourney",
   },
 
   {
     title: "Lucky Draw Wheel",
+    category: "Interactive",
     blurb: "A spin-to-win wheel, sunflower-bright.",
     tags: ["Interactive", "JavaScript"],
     url: "https://luckydrawwheel.netlify.app",
@@ -45,6 +53,7 @@ export const featuredProjects: Project[] = [
 
   {
     title: "MLBB Skin Collage",
+    category: "Tool",
     blurb: "AI-powered collage maker for MLBB skins.",
     tags: ["TypeScript", "Canvas"],
     url: "https://skincoll.netlify.app",
@@ -53,32 +62,39 @@ export const featuredProjects: Project[] = [
   },
   {
     title: "MLBB Trade Hub",
+    category: "Marketplace",
     blurb: "Buy, sell and trade MLBB accounts -all in one place.",
     tags: ["Next.js", "TypeScript", "Marketplace"],
     url: "https://mlbbtradehub.netlify.app",
     year: "2026",
     image: "/mlbb-trade-hub.png",
+    repo: "https://github.com/PrimeCyrus/MlbbMarket",
   },
   {
     title: "NagaHaat",
+    category: "E-commerce",
     blurb: "A marketplace for authentic Naga handicrafts.",
     tags: ["E-commerce", "Web App"],
     url: "https://nagahaat.netlify.app",
     year: "2026",
     image: "/naga-haat.png",
+    repo: "https://github.com/PrimeCyrus/NagaHaat",
   },
 ];
 
 export const moreProjects: Project[] = [
   {
     title: "Orb Surge",
+    category: "Game",
     blurb: "A reflex game — tap the orbs, survive the surge.",
     tags: ["Game"],
     url: "https://orbsurge.netlify.app",
     year: "2025",
+    repo: "https://github.com/PrimeCyrus/OrbSurge",
   },
   {
     title: "The Abyss Raid",
+    category: "Landing",
     blurb: "Team up and defend against the bosses of the Abyss.",
     tags: ["Landing"],
     url: "https://theabyssraid.netlify.app",
@@ -86,6 +102,7 @@ export const moreProjects: Project[] = [
   },
   {
     title: "RegLoop AI",
+    category: "AI",
     blurb: "Turns new regulations into human-reviewed compliance policy PRs.",
     tags: ["Next.js", "FastAPI", "AI"],
     url: "https://github.com/PrimeCyrus/RegLoop",
@@ -93,6 +110,7 @@ export const moreProjects: Project[] = [
   },
   {
     title: "NagaBuzz",
+    category: "Mobile App",
     blurb: "Nagaland's news, notice board and discussion app.",
     tags: ["Flutter", "Mobile App"],
     url: "https://github.com/PrimeCyrus/NagaBuzz",
@@ -100,6 +118,7 @@ export const moreProjects: Project[] = [
   },
   {
     title: "NagaBuzz Web Portal",
+    category: "Web App",
     blurb: "Privacy policy and account-deletion portal for the NagaBuzz app.",
     tags: ["Web App", "Supabase"],
     url: "https://github.com/PrimeCyrus/NagaBuzz-web-portal",
@@ -107,6 +126,7 @@ export const moreProjects: Project[] = [
   },
   {
     title: "Nagaland Quiz",
+    category: "Mobile App",
     blurb: "A timed quiz app on Nagaland and general knowledge.",
     tags: ["Flutter", "Mobile App"],
     url: "https://github.com/PrimeCyrus/NagalandQuiz",
@@ -186,7 +206,7 @@ export type PricingTier = {
 
 export const pricingTiers: PricingTier[] = [
   {
-    name: "🚀 Landing Pages",
+    name: "Landing Pages",
     price: "Starting at ₹3k",
     summary:
       "Modern one-page websites designed to showcase your brand or product.",
@@ -214,7 +234,7 @@ export const pricingTiers: PricingTier[] = [
   },
 
   {
-    name: "🏢 Business Websites",
+    name: "Business Websites",
     price: "Starting at ₹7k",
     summary:
       "Professional multi-page websites that help businesses establish an online presence.",
@@ -246,7 +266,7 @@ export const pricingTiers: PricingTier[] = [
   },
 
   {
-    name: "🛒 Online Stores",
+    name: "Online Stores",
     price: "Starting at ₹20k",
     summary:
       "Sell products online with secure payments, inventory, and order management.",
@@ -275,7 +295,7 @@ export const pricingTiers: PricingTier[] = [
   },
 
   {
-    name: "📱 Mobile Apps",
+    name: "Mobile Apps",
     price: "Starting at ₹20k",
     summary:
       "Cross-platform Android & iOS apps built with a modern, scalable architecture.",
@@ -302,7 +322,7 @@ export const pricingTiers: PricingTier[] = [
   },
 
   {
-    name: "💡 Custom Software",
+    name: "Custom Software",
     price: "Custom Quote",
     summary:
       "Tailored web and mobile solutions built around your unique business requirements.",
@@ -340,3 +360,98 @@ export const socials = [
 ];
 
 export const email = "cyrus.enzlabs@gmail.com";
+
+/* ——— Profile ——— */
+
+export const profile = {
+  name: "Cyrus",
+  company: "Enz Labs",
+  role: ["Developer", "Designer", "Builder"],
+  experience: "1 year",
+  // [text, highlighted?]
+  intro: [
+    ["Founder", true],
+    ["of", false],
+    ["Enz Labs,", true],
+    ["turning ideas into", false],
+    ["apps,", true],
+    ["websites", true],
+    ["and useful", false],
+    ["tools", true],
+    ["with", false],
+    ["Next.js,", true],
+    ["React", true],
+    ["and", false],
+    ["Flutter.", true],
+  ] as [string, boolean][],
+  summary: [
+    ["Self-taught", true],
+    ["developer and founder of", false],
+    ["Enz Labs", true],
+    [". I learn whatever the project needs and take it from", false],
+    ["Figma to deployment", true],
+    ["on my own. In a year I have built over 15 projects solo: marketplaces, management systems, games and tools on", false],
+    ["Next.js", true],
+    ["and", false],
+    ["TypeScript", true],
+    [", and mobile apps with", false],
+    ["Flutter", true],
+    [". I work async-friendly and direct, and I ship.", false],
+  ] as [string, boolean][],
+  stack: ["TypeScript", "Next.js", "React", "Flutter", "Tailwind", "Supabase"],
+};
+
+export const stats = [
+  { value: "15+", label: "Projects shipped", note: "Designed, built and deployed solo" },
+  { value: "20", label: "Technologies", note: "In the current toolbox" },
+  { value: "5", label: "Services", note: "From landing pages to custom software" },
+];
+
+const icon = (name: string) =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/${name}/${name}-original.svg`;
+
+export const skills = [
+  [
+    { name: "TypeScript", icon: icon("typescript") },
+    { name: "JavaScript", icon: icon("javascript") },
+    { name: "React", icon: icon("react") },
+    { name: "Next.js", icon: icon("nextjs") },
+    { name: "Tailwind CSS", icon: icon("tailwindcss") },
+    { name: "HTML", icon: icon("html5") },
+    { name: "CSS", icon: icon("css3") },
+    { name: "Node.js", icon: icon("nodejs") },
+    { name: "Framer Motion", icon: icon("framermotion") },
+    { name: "Figma", icon: icon("figma") },
+  ],
+  [
+    { name: "Flutter", icon: icon("flutter") },
+    { name: "Dart", icon: icon("dart") },
+    { name: "Python", icon: icon("python") },
+    { name: "FastAPI", icon: icon("fastapi") },
+    { name: "Supabase", icon: icon("supabase") },
+    { name: "PostgreSQL", icon: icon("postgresql") },
+    { name: "Netlify", icon: icon("netlify") },
+    { name: "Git", icon: icon("git") },
+    { name: "GitHub", icon: icon("github") },
+    { name: "C++", icon: icon("cplusplus") },
+  ],
+];
+
+export const processSteps = [
+  {
+    title: "Brief",
+    text: "You tell me what you need. I come back with scope, price and a delivery date — no surprises.",
+  },
+  {
+    title: "Design",
+    text: "Figma mockups first, so you see the look and flow before a line of code is written.",
+  },
+  {
+    title: "Build",
+    text: "Clean, responsive code with progress you can check along the way. Revisions are included.",
+  },
+  {
+    title: "Ship",
+    text: "Deployed, domain connected and tested on real devices. I stay around for fixes after launch.",
+  },
+];

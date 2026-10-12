@@ -1,27 +1,21 @@
 import type { Metadata } from "next";
-import { Sora, Archivo, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const sora = Sora({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["500", "600", "700"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600"],
 });
 
-const archivo = Archivo({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-archivo",
+  variable: "--font-space-grotesk",
   weight: ["400", "500", "600", "700"],
 });
 
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  weight: ["400", "600"],
-});
-
 export const metadata: Metadata = {
-  title: "Cyrus's Portfolio",
+  title: "Cyrus | Portfolio",
   description: "Cyrus — Built 15+ projects solo in a year.",
 };
 
@@ -29,9 +23,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${sora.variable} ${archivo.variable} ${jetbrains.variable} noise antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
         {children}
       </body>

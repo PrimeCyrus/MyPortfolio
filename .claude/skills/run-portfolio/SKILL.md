@@ -1,13 +1,13 @@
 ---
 name: run-portfolio
-description: Run, build, launch, screenshot, or smoke-test the Enz Labs portfolio (Next.js 15 + React Three Fiber + Framer Motion). Use when asked to start the dev server, take a screenshot of the portfolio, verify the homepage renders, or confirm a UI/design change works in the real app.
+description: Run, build, launch, screenshot, or smoke-test the Enz Labs portfolio (Next.js 15 + Tailwind v4). Use when asked to start the dev server, take a screenshot of the portfolio, verify the homepage renders, or confirm a UI/design change works in the real app.
 ---
 
 # Run the Enz Labs portfolio
 
-Single-page Next.js 15 portfolio (Tailwind v4, Framer Motion, React Three Fiber).
+Single-page Next.js 15 portfolio (Tailwind v4).
 One route — `/` — composed of a hero plus scroll-animated
-sections (`KnowMe`, `Work`, `WorkTogether`, `Testimonials`, `Writing`, `Contact`).
+sections (`Profile`, `Services`, `Skills`, `Projects`, `Process`, `Footer`).
 
 It is driven by **`.claude/skills/run-portfolio/driver.mjs`** — a Playwright
 script that launches the *system* Microsoft Edge (no browser download) to
@@ -99,16 +99,6 @@ Flags: `--url <url>` (overrides `--port`), `--port <n>`, `--out <file>`,
 default freezes CSS animations for a deterministic frame), `--width`/`--height`
 (viewport, default 1440×900).
 
-### 4. Reproduce the reduced-motion hydration bug (optional)
-
-```bash
-node .claude/skills/run-portfolio/driver.mjs check --port 52203 --reduced
-```
-
-This sets `prefers-reduced-motion: reduce` and exits 1, surfacing a real
-SSR/CSR hydration mismatch in `components/SectionFX.tsx` (see Gotchas). Normal
-`check` (no `--reduced`) passes clean.
-
 ## Run (human path)
 
 ```bash
@@ -119,25 +109,17 @@ Headless this shows nothing — use the driver to actually see/verify the page.
 
 ## Gotchas
 
-- **`preview_screenshot` (MCP) always times out (30s) on this app.** The R3F
-  `requestAnimationFrame` loop and the infinite `drift`/`ping` CSS
+- **`preview_screenshot` (MCP) always times out (30s) on this app.** The infinite marquee/`ping` CSS
   animations mean the page never reaches network/render idle, which that tool
   waits for. `preview_snapshot` (accessibility tree) *does* work and is great
   for checking text/structure. For pixels, use `driver.mjs shot`.
 - **`--full` screenshots are blank below the fold unless you scroll first.**
-  Inner content uses `Reveal` (`components/Reveal.tsx`) with
-  `whileInView` + `initial="hidden"` (opacity 0) + `viewport={{ once: true }}`.
+  Inner content uses `FadeIn` (`components/FadeIn.tsx`), which starts at
+  opacity 0 and reveals once via an IntersectionObserver.
   Off-screen sections never intersect, so a naive full-page capture shows black.
   The driver scrolls top→bottom in steps (firing each IntersectionObserver),
-  then returns to the top before capturing. `once: true` keeps them revealed.
-- **Reduced motion triggers a hydration mismatch.** `SectionFX` calls
-  `useReducedMotion()` and returns a *different element tree* when reduced
-  (`<div>` vs the `motion.div` wrapper) — `components/SectionFX.tsx:59`. SSR
-  renders the motion tree (server can't know the preference); a reduced-motion
-  client renders the plain tree → React hydration error + a Framer Motion
-  "Target ref is defined but not hydrated" follow-on. Real users with reduced
-  motion enabled hit this. That's why `check` defaults to normal motion and only
-  reproduces the bug under `--reduced`.
+  then returns to the top before capturing. They stay revealed once shown.
+
 - **No favicon is shipped** (no `public/` dir, no `app/icon.*`), so the browser's
   automatic `/favicon.ico` request 404s. The driver classifies this as a
   `warning`, not a failure, so it doesn't false-fail `check`.
