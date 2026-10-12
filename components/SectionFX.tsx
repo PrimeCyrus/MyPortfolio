@@ -7,6 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import useIsMobile from "@/lib/useIsMobile";
 
 /*
  * Scroll-driven 3D treatment for a whole section: it bends in,
@@ -32,7 +33,19 @@ export default function SectionFX({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const p = personalities[variant % personalities.length];
+  const mobile = useIsMobile();
+  const base = personalities[variant % personalities.length];
+  // On phones: no sideways slide (it clips content off-screen) and a much
+  // gentler bend/zoom so sections don't jump around while scrolling.
+  const p = mobile
+    ? {
+        rotIn: base.rotIn * 0.3,
+        rotOut: base.rotOut * 0.3,
+        scaleIn: 1 - (1 - Math.min(base.scaleIn, 1)) * 0.3,
+        scaleOut: 1 - (1 - base.scaleOut) * 0.3,
+        x: 0,
+      }
+    : base;
 
   const { scrollYProgress } = useScroll({
     target: ref,

@@ -2,6 +2,7 @@
 
 import { motion, type Variant, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
+import useIsMobile from "@/lib/useIsMobile";
 
 type From = "up" | "left" | "right" | "zoom" | "flip";
 
@@ -24,8 +25,11 @@ export default function Reveal({
   from?: From;
   className?: string;
 }) {
+  const mobile = useIsMobile();
+  // sideways entrances get clipped off-screen on phones — rise instead
+  const origin: From = mobile && (from === "left" || from === "right") ? "up" : from;
   const variants: Variants = {
-    hidden: hiddenBy[from],
+    hidden: hiddenBy[origin],
     show: {
       opacity: 1,
       x: 0,
