@@ -11,14 +11,13 @@ export type Project = {
 
 export const featuredProjects: Project[] = [
   {
-    title: "Hostel Management",
-    category: "Management",
-    blurb: "A hostel management system",
-    tags: ["Web App", "Management"],
-    url: "https://site--hostelmanagement--j7bz4xk9jtkj.code.run/",
+    title: "Hearth & Paw",
+    category: "Pet Care",
+    blurb: "A vet care app to book visits, consult online and shop for pets.",
+    tags: ["Web App", "Healthcare"],
+    url: "https://vetclinicsphek.netlify.app",
     year: "2026",
-    image: "/hostel-management.png",
-    repo: "https://github.com/PrimeCyrus/HostelManagement",
+    image: "/vetclinicsphek.png",
   },
   {
     title: "QiroEats",
@@ -40,13 +39,14 @@ export const featuredProjects: Project[] = [
     image: "/intellistudyai.png",
   },
   {
-    title: "Hearth & Paw",
-    category: "Pet Care",
-    blurb: "A vet care app to book visits, consult online and shop for pets.",
-    tags: ["Web App", "Healthcare"],
-    url: "https://vetclinicsphek.netlify.app",
+    title: "Hostel Management",
+    category: "Management",
+    blurb: "A hostel management system",
+    tags: ["Web App", "Management"],
+    url: "https://site--hostelmanagement--j7bz4xk9jtkj.code.run/",
     year: "2026",
-    image: "/vetclinicsphek.png",
+    image: "/hostel-management.png",
+    repo: "https://github.com/PrimeCyrus/HostelManagement",
   },
   {
     title: "PigTrack",
