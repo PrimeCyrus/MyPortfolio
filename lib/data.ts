@@ -179,7 +179,7 @@ export const rhythmFacts = [
 
 export const workStyle = [
   "Self-taught — I learn whatever the project needs",
-  "15+ projects solo in a year",
+  "15+ projects solo in 3 years",
   "Figma to deployment, one pair of hands",
   "Async-friendly and direct",
 ];
@@ -363,7 +363,7 @@ export const profile = {
   name: "Nezo Tetseo",
   company: "HillStack Studios",
   role: ["Developer", "Designer", "Builder"],
-  experience: "1 year",
+  experience: "3 years",
   // [text, highlighted?]
   intro: [
     ["Founder", true],
@@ -386,7 +386,7 @@ export const profile = {
     ["HillStack Studios", true],
     [". I learn whatever the project needs and take it from", false],
     ["Figma to deployment", true],
-    ["on my own. In a year I have built over 15 projects solo: marketplaces, management systems, games and tools on", false],
+    ["on my own. In 3 years I have built over 15 projects solo: marketplaces, management systems, games and tools on", false],
     ["Next.js", true],
     ["and", false],
     ["TypeScript", true],

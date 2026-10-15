@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Nezo Tetseo | Portfolio",
-  description: "Nezo Tetseo — Built 15+ projects solo in a year.",
+  description: "Nezo Tetseo — Built 15+ projects solo in 3 years.",
 };
 
 export default function RootLayout({
