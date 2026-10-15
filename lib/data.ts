@@ -52,25 +52,6 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    title: "MLBB Skin Collage",
-    category: "Tool",
-    blurb: "AI-powered collage maker for MLBB skins.",
-    tags: ["TypeScript", "Canvas"],
-    url: "https://skincoll.netlify.app",
-    year: "2026",
-    image: "/mlbb-skin-collage.png",
-  },
-  {
-    title: "MLBB Trade Hub",
-    category: "Marketplace",
-    blurb: "Buy, sell and trade MLBB accounts -all in one place.",
-    tags: ["Next.js", "TypeScript", "Marketplace"],
-    url: "https://mlbbtradehub.netlify.app",
-    year: "2026",
-    image: "/mlbb-trade-hub.png",
-    repo: "https://github.com/PrimeCyrus/MlbbMarket",
-  },
-  {
     title: "NagaHaat",
     category: "E-commerce",
     blurb: "A marketplace for authentic Naga handicrafts.",
@@ -179,17 +160,8 @@ export const workStyle = [
   "Async-friendly and direct",
 ];
 
-export const magnumOpus = {
-  title: "MlbbSkinCollage",
-  desc: "A collage maker for MLBB",
-  commits: 293,
-  language: "TypeScript",
-};
-
 export const topProjects = [
-  { name: "MlbbSkinCollage", commits: 293 },
   { name: "TheGrimoire", commits: 41 },
-  { name: "MlbbMarket", commits: 35 },
   { name: "NagaHaat", commits: 21 },
   { name: "GitJourney", commits: 15 },
 ];

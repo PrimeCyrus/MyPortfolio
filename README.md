@@ -26,6 +26,6 @@ All copy lives in [lib/data.ts](lib/data.ts):
 - `skills` — the two marquee rows (icons load from the devicon CDN)
 - `processSteps` — the "How I work" timeline
 - `socials`, `email` — hero, footer and contact links
-- `languages`, `rhythm`, `magnumOpus`, `topProjects`, `workStyle` — GitHub stats, currently not rendered
+- `languages`, `rhythm`, `topProjects`, `workStyle` — GitHub stats, currently not rendered
 
 Sections live in [components/](components/) and are composed in [app/page.tsx](app/page.tsx): Header, Hero, Profile, Services, Skills, Projects, Process, Footer. Colors, fonts and animations: [app/globals.css](app/globals.css) and [app/layout.tsx](app/layout.tsx). Scroll reveals: [components/FadeIn.tsx](components/FadeIn.tsx).
