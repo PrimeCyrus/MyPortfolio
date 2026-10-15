@@ -20,6 +20,15 @@ export const featuredProjects: Project[] = [
     image: "/vetclinicsphek.png",
   },
   {
+    title: "PigTrack",
+    category: "Farm Management",
+    blurb: "Track herd value, feed, money and profit for a pig farm.",
+    tags: ["Web App", "Management"],
+    url: "https://pigtrack.netlify.app",
+    year: "2026",
+    image: "/pigtrack.png",
+  },
+  {
     title: "QiroEats",
     category: "Food Delivery",
     blurb: "Food delivery from the best local restaurants.",
@@ -47,15 +56,6 @@ export const featuredProjects: Project[] = [
     year: "2026",
     image: "/hostel-management.png",
     repo: "https://github.com/PrimeCyrus/HostelManagement",
-  },
-  {
-    title: "PigTrack",
-    category: "Farm Management",
-    blurb: "Track herd value, feed, money and profit for a pig farm.",
-    tags: ["Web App", "Management"],
-    url: "https://pigtrack.netlify.app",
-    year: "2026",
-    image: "/pigtrack.png",
   },
   {
     title: "CanArt",
