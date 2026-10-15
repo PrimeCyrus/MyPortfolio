@@ -364,15 +364,15 @@ export const email = "cyrus.enzlabs@gmail.com";
 /* ——— Profile ——— */
 
 export const profile = {
-  name: "Cyrus",
-  company: "Enz Labs",
+  name: "Nezo Tetseo",
+  company: "HillStack Studios",
   role: ["Developer", "Designer", "Builder"],
   experience: "1 year",
   // [text, highlighted?]
   intro: [
     ["Founder", true],
     ["of", false],
-    ["Enz Labs,", true],
+    ["HillStack Studios,", true],
     ["turning ideas into", false],
     ["apps,", true],
     ["websites", true],
@@ -387,7 +387,7 @@ export const profile = {
   summary: [
     ["Self-taught", true],
     ["developer and founder of", false],
-    ["Enz Labs", true],
+    ["HillStack Studios", true],
     [". I learn whatever the project needs and take it from", false],
     ["Figma to deployment", true],
     ["on my own. In a year I have built over 15 projects solo: marketplaces, management systems, games and tools on", false],

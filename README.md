@@ -1,4 +1,4 @@
-# Enz Labs — Portfolio of Cyrus
+# HillStack Studios — Portfolio of Nezo Tetseo
 
 Minimal monochrome portfolio (dark by default, with a light theme toggle) built with Next.js 15 and Tailwind CSS v4.
 

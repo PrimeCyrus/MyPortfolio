@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Driver for the Enz Labs portfolio (Next.js 15 + R3F + Framer Motion).
+// Driver for the HillStack Studios portfolio (Next.js 15 + R3F + Framer Motion).
 //
 // Why this exists: the MCP/Claude preview screenshot tool times out on this
 // app because the Three.js render loop + infinite CSS animations never let the
@@ -102,7 +102,7 @@ async function check() {
     filterFavicon();
     const ok =
       status === 200 &&
-      /Cyrus here/i.test(h1) &&
+      /Nezo Tetseo/i.test(h1) &&
       sections >= 5 &&
       errors.length === 0;
     console.log(JSON.stringify({ url, status, h1, sections, projectCards, errors, warnings }, null, 2));

@@ -1,9 +1,9 @@
 ---
 name: run-portfolio
-description: Run, build, launch, screenshot, or smoke-test the Enz Labs portfolio (Next.js 15 + Tailwind v4). Use when asked to start the dev server, take a screenshot of the portfolio, verify the homepage renders, or confirm a UI/design change works in the real app.
+description: Run, build, launch, screenshot, or smoke-test the HillStack Studios portfolio (Next.js 15 + Tailwind v4). Use when asked to start the dev server, take a screenshot of the portfolio, verify the homepage renders, or confirm a UI/design change works in the real app.
 ---
 
-# Run the Enz Labs portfolio
+# Run the HillStack Studios portfolio
 
 Single-page Next.js 15 portfolio (Tailwind v4).
 One route — `/` — composed of a hero plus scroll-animated
@@ -58,7 +58,7 @@ npm run dev                            # → http://localhost:3000
 
 ### 2. Smoke-test the homepage
 
-`check` loads `/`, asserts HTTP 200, that the hero `<h1>` says "Cyrus here…",
+`check` loads `/`, asserts HTTP 200, that the hero `<h1>` says "Nezo Tetseo",
 that ≥5 `<section>`s and the project-card links are present, and that there are
 no JS/console errors. Exit code 0 = pass, 1 = fail. Pass `--port` to match the
 server (omit it to use port 3000):
@@ -73,7 +73,7 @@ Verified output:
 {
   "url": "http://localhost:52203",
   "status": 200,
-  "h1": "Cyrus here. I turn ideas into apps, websites and useful tools.",
+  "h1": "Nezo Tetseo",
   "sections": 7,
   "projectCards": 11,
   "errors": [],
